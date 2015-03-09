@@ -71,6 +71,11 @@
                 $('#toggle').click(function() {
                     status = !status;
                     if (status) {
+
+						if (Notification.permission == 'default') {
+			                DesktopNotifications.requestPermission();
+			            }
+
                         $('#toggle').text('STOP');
                         ec.start();
                     } else {
