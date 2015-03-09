@@ -39,7 +39,7 @@ function EyeCare (clock, time_out, time_rest, status_ele) {
 
     this.start = function () {
         if (!eyecare.first_time) {
-            DesktopNotifications.doNotify('EyeCare', 'OK ! WORK TIME !!!', '/assets/work.png');
+            DesktopNotifications.doNotify('EyeCare', 'OK ! WORK TIME !!!', 'assets/work.png');
         }
 
         eyecare.first_time = false;
@@ -60,7 +60,7 @@ function EyeCare (clock, time_out, time_rest, status_ele) {
     };
 
     this.rest = function() {
-        DesktopNotifications.doNotify('EyeCare', 'TAKE A REST PLEASE !!!', '/assets/rest.gif');
+        DesktopNotifications.doNotify('EyeCare', 'TAKE A REST PLEASE !!!', 'assets/rest.gif');
         eyecare.status_ele.text('TAKE A REST PLEASE !!!');
         eyecare.status_ele.css('color', '#FF6666');
         eyecare.clock.setTime(this.time_rest);
